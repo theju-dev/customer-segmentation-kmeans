@@ -88,7 +88,7 @@ def main():
     hierarchical_model, cluster_labels=fit_hierarchical_model(X_scaled,FINAL_N_CLUSTERS)
     final_silhouette=calculate_final_silhouette_score(X_scaled,cluster_labels)
     segmented_customers_df=assign_cluster_labels(customers_df,cluster_labels)
-    print("\n Final hierarchical silhouette score:",round(final_silhouette,4))
+    print("\n Final hierarchical silhouette score:",round(final_silhouette))
     print("\nSegmented customers")
     print(segmented_customers_df.head())
     cluster_profile_df=create_cluster_profile(segmented_customers_df)
